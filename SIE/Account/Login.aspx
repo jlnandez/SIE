@@ -17,11 +17,11 @@
                         </p>
                     </asp:PlaceHolder>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Correo electrónico</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="txtMatricula" CssClass="col-md-2 control-label">Correo electrónico</asp:Label>
                         <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                                CssClass="text-danger" ErrorMessage="El campo de correo electrónico es obligatorio." />
+                            <asp:TextBox runat="server" ID="txtMatricula" CssClass="form-control"/>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMatricula"
+                                CssClass="text-danger" ErrorMessage="El campo de matricula es obligatorio." />
                         </div>
                     </div>
                     <div class="form-group">

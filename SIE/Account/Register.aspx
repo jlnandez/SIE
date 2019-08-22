@@ -10,6 +10,19 @@
         <h4>Crear una nueva cuenta</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
+
+
+        <!----------------AGREGAMOS MATRICULA-->
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Matricula" CssClass="col-md-2 control-label">Matricula</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtMatricula" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMatricula"
+                    CssClass="text-danger" ErrorMessage="El campo matricula es obligatorio." />
+            </div>
+        </div>
+
+
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Correo electrónico</asp:Label>
             <div class="col-md-10">
