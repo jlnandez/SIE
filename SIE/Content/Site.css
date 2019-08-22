@@ -2,6 +2,11 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    /*Estilo Agregamos*/
+    background: #D1D900;
+    background: -moz-radial-gradient(center, #D1D900 0%, #13540F 100%);
+    background: -webkit-radial-gradient(center, #D1D900 0%, #13540F 100%);
+    background: radial-gradient(ellipse at center, #D1D900 0%, #13540F 100%);
 }
 
 /* Wrapping element */
@@ -36,3 +41,54 @@ input[type="select"] {
         padding: 0;
     }
 }
+
+/*ESTILOS ADD*/
+.btncargar {
+    background-color: #44c767;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 11px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+    .btncargar:hover {
+        background-color: #5cbf2a;
+    }
+
+    .btncargar:active {
+        position: relative;
+        top: 1px;
+    }
+
+.btnborrar {
+    background-color: #c74545;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    border: 1px solid #ab1919;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 11px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #662828;
+}
+
+    .btnborrar:hover {
+        background-color: #bd2a2a;
+    }
+
+    .btnborrar:active {
+        position: relative;
+        top: 1px;
+    }

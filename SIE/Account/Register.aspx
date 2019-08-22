@@ -1,20 +1,22 @@
 ﻿<%@ Page Title="Registrarse" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="SIE.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+
+    <h2 class="text-white"><%: Title %>.</h2>
+
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
 
     <div class="form-horizontal">
-        <h4>Crear una nueva cuenta</h4>
+        <h4 class="text-white">Crear una nueva cuenta</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
 
 
         <!----------------AGREGAMOS MATRICULA-->
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Matricula" CssClass="col-md-2 control-label">Matricula</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="txtMatricula" CssClass="col-md-2 control-label text-white">Matricula</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="txtMatricula" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMatricula"
@@ -24,7 +26,7 @@
 
 
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Correo electrónico</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label text-white">Correo electrónico</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
@@ -32,7 +34,7 @@
             </div>
         </div>
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Contraseña</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label text-white">Contraseña</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
@@ -40,7 +42,7 @@
             </div>
         </div>
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirmar contraseña</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label text-white">Confirmar contraseña</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"

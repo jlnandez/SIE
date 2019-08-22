@@ -51,8 +51,19 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentos<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/vAlumno/DocumentosSubir.aspx">Subir Documentos</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Ayuda</a></li>
+                            </ul>
+                        </li>
                         <li><a runat="server" href="~/About">Acerca de</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
+                        
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -78,7 +89,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Sistema de Intercambio Estudiantil FCA</p>
+                <p class="text-white">&copy; <%: DateTime.Now.Year %> - Sistema de Intercambio Estudiantil FCA</p>
             </footer>
         </div>
     </form>

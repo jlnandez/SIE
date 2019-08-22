@@ -1,17 +1,16 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="SIE.Contact" %>
+﻿<%@ Page Title="Contacto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="SIE.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
+    <h2 class="text-white"><%: Title %>.</h2>
+    <address class="text-white">
+        Facultad de Ciencias Administrativas UABC<br />
+        Blvd Río Nuevo y Eje Central<br />
+        Mexicali, Baja California CP.21330<br />
+        <abbr title="Teléfono">Teléfono:</abbr>
+        +52(686)582-3334
     </address>
 
     <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        <strong class="text-white">Soporte:</strong> <a href="mailto:a1100258@uabc.edu.mx">a1100258@uabc.edu.mx</a><br />
     </address>
 </asp:Content>
