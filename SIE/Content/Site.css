@@ -3,10 +3,10 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     /*Estilo Agregamos*/
-    background: #D1D900;
+    /*background: #D1D900;
     background: -moz-radial-gradient(center, #D1D900 0%, #13540F 100%);
     background: -webkit-radial-gradient(center, #D1D900 0%, #13540F 100%);
-    background: radial-gradient(ellipse at center, #D1D900 0%, #13540F 100%);
+    background: radial-gradient(ellipse at center, #D1D900 0%, #13540F 100%);*/
 }
 
 /* Wrapping element */

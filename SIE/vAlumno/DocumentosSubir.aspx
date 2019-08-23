@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Subir Documentos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DocumentosSubir.aspx.cs" Inherits="SIE.vAlumno.DocumentosSubir" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2 class="text-white"><%: Title %>.</h2>
+    <h2><%: Title %>.</h2>
     <hr />
 
 
