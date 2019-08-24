@@ -50,10 +50,10 @@ namespace SIE
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequireNonLetterOrDigit = false,
+                RequireDigit = false,
+                RequireLowercase = false,
+                RequireUppercase = false,
             };
 
             // Registre proveedores de dos factores. Esta aplicación usa Teléfono y Correos electrónico como paso para la recepción de un código para comprobar el usuario

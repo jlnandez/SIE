@@ -23,10 +23,19 @@ namespace SIE.Account
                 //string code = manager.GenerateEmailConfirmationToken(user.Id);
                 //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
                 //manager.SendEmail(user.Id, "Confirmar cuenta", "Para confirmar la cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>.");
-                //----------ASIGNAMOS A ROL
+
+
+                //----------ASIGNAMOS A ROL e Insertamos en tabla alumnos
                 manager.AddToRole(user.Id, "Alumno");
+                txtAux.Text = user.Id;
+                ds_alumnos.Insert();
+                
+
+                
                 signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+
+                
             }
             else 
             {

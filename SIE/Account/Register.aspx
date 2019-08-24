@@ -51,10 +51,88 @@
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="La contraseña y la contraseña de confirmación no coinciden." />
             </div>
         </div>
+
+
+        <!------------------------- DATOS PERSONALES  ---------------->
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtNombre" CssClass="col-md-2 control-label">Nombre</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtNombre"
+                    CssClass="text-danger" ErrorMessage="El campo Nombre es obligatorio." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtApellidoPaterno" CssClass="col-md-2 control-label">Apellido Paterno</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtApellidoPaterno" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtApellidoPaterno"
+                    CssClass="text-danger" ErrorMessage="El campo Apellido Paterno es obligatorio." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtApellidoMaterno" CssClass="col-md-2 control-label">Apellido Materno</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtApellidoMaterno" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtApellidoMaterno"
+                    CssClass="text-danger" ErrorMessage="El campo Apellido Materno es obligatorio." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="ddlCarrera" CssClass="col-md-2 control-label">Carrera</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="ddlCarrera" runat="server" CssClass="form-control" DataSourceID="cat_carreras" DataTextField="Carrera" DataValueField="Id"></asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlCarrera"
+                    CssClass="text-danger" ErrorMessage="El campo Carrera es obligatorio." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtCiclo" CssClass="col-md-2 control-label">Ciclo Escolar</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtCiclo" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCiclo"
+                    CssClass="text-danger" ErrorMessage="El campo Ciclo Escolar es obligatorio." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtTelefono" CssClass="col-md-2 control-label">Telefono
+            </asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtTelefono" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtTelefono"
+                    CssClass="text-danger" ErrorMessage="El campo Telefono es obligatorio." />
+            </div>
+        </div>
+
+
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Registrarse" CssClass="btn btn-default" />
             </div>
         </div>
     </div>
+
+    <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" InsertCommand="INSERT INTO Alumno(Nombre, ApellidoPaterno, ApellidoMaterno, Matricula, Carrera_Id, CicloEscolar, Telefono, User_Id) VALUES (@nombre, @apellidoPaterno, @apellidoMaterno, @matricula, @carrera, @ciclo, @telefono, @userId)" SelectCommand="SELECT Alumno.* FROM Alumno">
+        <InsertParameters>
+            <asp:ControlParameter ControlID="txtNombre" Name="nombre" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtApellidoMaterno" Name="apellidoPaterno" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtApellidoMaterno" Name="apellidoMaterno" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtMatricula" Name="matricula" PropertyName="Text" />
+            <asp:ControlParameter ControlID="ddlCarrera" Name="carrera" PropertyName="SelectedValue" />
+            <asp:ControlParameter ControlID="txtCiclo" Name="ciclo" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtTelefono" Name="telefono" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtAux" Name="userId" PropertyName="Text" />
+        </InsertParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="cat_carreras" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [Cat_Carreras]"></asp:SqlDataSource>
+
+    <asp:TextBox ID="txtAux" runat="server" Visible="False"></asp:TextBox>
+
 </asp:Content>

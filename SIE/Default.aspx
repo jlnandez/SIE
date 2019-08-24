@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SIE.Default" %>
 
+<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
@@ -63,15 +65,27 @@
 <!-- 								<a class="btn btn-xs  btn-info guiaRapida" data-guia="2"  target="_blank">Ayuda</a> -->
 			
 <!-- 							</p> -->
-							<p class=" text-right">
+							<%--<p class=" text-right">
 								&iquest;A&uacute;n no tienes cuenta?<a href="/ur/registro_ur_externo" target="_blank"> Reg&iacute;strate</a>
-							</p>
+							</p>--%>
+                            <p class="text-right">
+                                <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Registrarse como usuario nuevo</asp:HyperLink>
+                            </p>
 						</div>
 						<div class="container">
-							<form runat="server" class="form-horizontal" role="form" action="/j_spring_security_check" method='post'>
+							<%--<form runat="server" class="form-horizontal" role="form" action="/j_spring_security_check" method='post'>--%>
+                                <form runat="server" class="form-horizontal">
 								<div class="form-group">
 									<h3 class="col-lg-12 control-label" style="text-align: center">Acceso</h3>
 								</div>
+
+                                    <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
+                                        <p class="text-danger">
+                                            <asp:Literal runat="server" ID="FailureText" />
+                                        </p>
+                                    </asp:PlaceHolder>
+
+
 								<div class="form-group">
 									<label for="inputEmail1" class="col-lg-3 control-label">Matricula: </label>
 									<div class="col-lg-8">
@@ -83,15 +97,22 @@
 									<label for="inputPassword1" class="col-lg-3 control-label">Contrase&ntilde;a: </label>
 									<div class="col-lg-8">
 										<%--<input type="password" name='j_password' class="form-control" id="inputPassword1" placeholder="Contrase&ntilde;a" required/>--%>
-                                        <asp:TextBox ID="inputPassword1" runat="server" class="form-control" placeholder="Contraseña" required></asp:TextBox>
+                                        <asp:TextBox ID="inputPassword1" runat="server" class="form-control" placeholder="Contraseña" required TextMode="Password"></asp:TextBox>
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-lg-12 text-center">
 										<%--<button type="submit" class="btn btn-primary">Iniciar sesi&oacute;n</button>--%>
-                                        <asp:Button ID="Button1" runat="server" Text="Iniciar sesion" class="btn btn-primary" OnClick="Button1_Click"/>
+                                        <asp:Button ID="Button1" runat="server" Text="Iniciar sesion" class="btn btn-primary" OnClick="LogIn"/>
 									</div>
 								</div>
+
+                                    <div class="checkbox">
+                                        <asp:CheckBox runat="server" ID="RememberMe" />
+                                        <asp:Label runat="server" AssociatedControlID="RememberMe">¿Recordar cuenta?</asp:Label>
+                                    </div>
+
+
 							</form>
 							<a data-toggle="modal" href="#myModal">&iquest;Olvidaste tu contrase&ntilde;a?</a>
 
@@ -136,6 +157,14 @@
 							<strong>Ensenada</strong> <br> Cristina Niebla<br> Ernesto Suárez<br> sifpvu.soporte@uabc.edu.mx <br> 
 							(646) 175-07-00 Ext. 63618
 						</address> -->
+
+
+                        <div class="col-md-4">
+                            <section id="socialLoginForm">
+                                <uc:openauthproviders runat="server" id="OpenAuthLogin" Visible="False" />
+                            </section>
+                        </div>
+
 					</div>
 				</div>
 			</div>

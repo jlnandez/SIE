@@ -12,11 +12,10 @@ namespace SIE.vAlumno
     public partial class DocumentosSubir : System.Web.UI.Page
     {
         string user;
-        string nivel;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            user = "1100258";
+            user = (String)(Session["Matricula"]);
 
 
 
