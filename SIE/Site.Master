@@ -46,21 +46,47 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">SIE</a>
+                    <%--<a class="navbar-brand" runat="server" href="~/">SIE</a>--%>
+                    <a class="navbar-brand" runat="server" href="#">SIE</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="#">Otra Cosa</a></li>
+
+                        <%                
+                            if (HttpContext.Current.User.IsInRole("Admin"))
+                            {
+                        %>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Alumnos<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/vMaestro/ListadoAlumnos.aspx">Listado Alumnos</a></li>
+                                <li><a href="/Account/ResetPassword.aspx">Restablecer Contraseña de Alumno</a></li>
+                            </ul>
+                        </li>
+                        <%                
+                            }
+                        %>
+
+                        <%                
+                            if (HttpContext.Current.User.IsInRole("Alumno"))
+                            {
+                        %>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentos<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/vAlumno/DocumentosSubir.aspx">Subir Documentos</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Ayuda</a></li>
                             </ul>
                         </li>
+                        <%                
+                            }
+                        %>
+
+                        <%                
+                            if (HttpContext.Current.User.IsInRole("Admin") || HttpContext.Current.User.IsInRole("Alumno"))
+                            {
+                        %>
                         <li><a runat="server" href="~/About">Acerca de</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
                         
@@ -74,13 +100,19 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hola, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesion" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
                             </ul>
                         </LoggedInTemplate>
                     </asp:LoginView>
+
+                        <%                
+                            }
+                        %>
+
+
                 </div>
             </div>
         </div>

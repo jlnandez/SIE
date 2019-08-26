@@ -11,6 +11,8 @@ namespace SIE.Account
 {
     public partial class ResetPassword : Page
     {
+
+
         protected string StatusMessage
         {
             get;
@@ -20,9 +22,14 @@ namespace SIE.Account
         protected void Reset_Click(object sender, EventArgs e)
         {
             string code = IdentityHelper.GetCodeFromRequest(Request);
-            if (code != null)
+            //if (code != null)
+            //{
+
+            if (HttpContext.Current.User.IsInRole("Admin"))
             {
-                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                
+            
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
                 var user = manager.FindByName(Email.Text);
                 if (user == null)
@@ -30,8 +37,14 @@ namespace SIE.Account
                     ErrorMessage.Text = "No se encontró ningún usuario";
                     return;
                 }
-                var result = manager.ResetPassword(user.Id, code, Password.Text);
-                if (result.Succeeded)
+
+            //var result = manager.ResetPassword(user.Id, code, Password.Text);
+            manager.RemovePassword(user.Id);
+
+           var result = manager.AddPassword(user.Id, Password.Text);
+            
+
+            if (result.Succeeded)
                 {
                     Response.Redirect("~/Account/ResetPasswordConfirmation");
                     return;

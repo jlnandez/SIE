@@ -182,6 +182,101 @@
     <Content Include="Content\login\bootstrap.css" />
     <Content Include="Content\login\bootstrap.js" />
     <Content Include="Content\login\estilos.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.bootstrap.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.bootstrap.min.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.bootstrap4.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.bootstrap4.min.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.dataTables.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.dataTables.min.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.foundation.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.foundation.min.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.jqueryui.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.jqueryui.min.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.semanticui.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\buttons.semanticui.min.css" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.bootstrap.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.bootstrap.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.bootstrap4.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.bootstrap4.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.colVis.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.colVis.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.flash.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.flash.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.foundation.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.foundation.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.html5.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.html5.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.jqueryui.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.jqueryui.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.print.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.print.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.semanticui.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\buttons.semanticui.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\dataTables.buttons.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\js\dataTables.buttons.min.js" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\swf\flashExport.swf" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.bootstrap.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.bootstrap4.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.foundation.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.foundation.min.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.jqueryui.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.jqueryui.min.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.semanticui.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\dataTables.semanticui.min.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\jquery.dataTables.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\css\jquery.dataTables.min.css" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\images\sort_asc.png" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\images\sort_asc_disabled.png" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\images\sort_both.png" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\images\sort_desc.png" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\images\sort_desc_disabled.png" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.bootstrap.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.bootstrap.min.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.bootstrap4.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.foundation.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.foundation.min.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.jqueryui.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.jqueryui.min.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.semanticui.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\dataTables.semanticui.min.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\jquery.dataTables.js" />
+    <Content Include="Content\plugins\DataTables\DataTables-1.10.18\js\jquery.dataTables.min.js" />
+    <Content Include="Content\plugins\DataTables\datatables.css" />
+    <Content Include="Content\plugins\DataTables\datatables.js" />
+    <Content Include="Content\plugins\DataTables\datatables.min.css" />
+    <Content Include="Content\plugins\DataTables\datatables.min.js" />
+    <Content Include="Content\plugins\DataTables\JSZip-2.5.0\jszip.js" />
+    <Content Include="Content\plugins\DataTables\JSZip-2.5.0\jszip.min.js" />
+    <Content Include="Content\plugins\DataTables\pdfmake-0.1.36\pdfmake.js" />
+    <Content Include="Content\plugins\DataTables\pdfmake-0.1.36\pdfmake.min.js" />
+    <Content Include="Content\plugins\DataTables\pdfmake-0.1.36\vfs_fonts.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.bootstrap.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.bootstrap.min.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.bootstrap4.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.bootstrap4.min.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.dataTables.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.dataTables.min.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.foundation.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.foundation.min.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.jqueryui.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.jqueryui.min.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.semanticui.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\css\responsive.semanticui.min.css" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\dataTables.responsive.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\dataTables.responsive.min.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.bootstrap.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.bootstrap.min.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.bootstrap4.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.bootstrap4.min.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.foundation.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.foundation.min.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.jqueryui.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.jqueryui.min.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.semanticui.js" />
+    <Content Include="Content\plugins\DataTables\Responsive-2.2.2\js\responsive.semanticui.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -196,6 +291,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\common.scss" />
+    <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\mixins.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -226,6 +323,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="vMaestro\AlumnoEditar.aspx" />
     <Content Include="vAlumno\DocumentosSubir.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="vMaestro\ListadoAlumnos.aspx" />
@@ -384,6 +482,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="vMaestro\AlumnoEditar.aspx.cs">
+      <DependentUpon>AlumnoEditar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vMaestro\AlumnoEditar.aspx.designer.cs">
+      <DependentUpon>AlumnoEditar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vAlumno\DocumentosSubir.aspx.cs">
       <DependentUpon>DocumentosSubir.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
