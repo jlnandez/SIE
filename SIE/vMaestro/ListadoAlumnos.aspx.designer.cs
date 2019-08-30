@@ -13,6 +13,15 @@ namespace SIE.vMaestro {
     public partial class ListadoAlumnos {
         
         /// <summary>
+        /// btnViewFiles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnViewFiles;
+        
+        /// <summary>
         /// btnIngresar control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace SIE.vMaestro {
         protected global::System.Web.UI.WebControls.Button btnEditar;
         
         /// <summary>
-        /// btnBorrar1 control.
+        /// btnModal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBorrar1;
+        protected global::System.Web.UI.WebControls.Button btnModal;
         
         /// <summary>
         /// GridView1 control.
@@ -56,5 +65,23 @@ namespace SIE.vMaestro {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource ds_alumnos;
+        
+        /// <summary>
+        /// ds_usuarios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource ds_usuarios;
+        
+        /// <summary>
+        /// btnDeleteC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteC;
     }
 }

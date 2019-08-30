@@ -132,6 +132,6 @@
 .ui-dialog-titlebar-close{
 	background: url('resources/js/general/jtable/themes/metro/close.png.) !important;
 }
-tr.whH:hoverC
+tr.whH:hover{
 	background-color:#F5F5F5;
 }

@@ -35,9 +35,9 @@ namespace SIE.Account
                     ds_alumnos.Insert();
 
 
-
-                    signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                    Response.Redirect("~/");
+                    //signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                    //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
 
 
                 }

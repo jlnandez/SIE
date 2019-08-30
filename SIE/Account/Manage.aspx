@@ -23,10 +23,10 @@
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Create]" Visible="false" ID="CreatePassword" runat="server" />
                     </dd>
                     <dt>Inicios de sesión externos:</dt>
-                    <dd><%: LoginsCount %>
+<%--                    <dd><%: LoginsCount %>
                         <asp:HyperLink NavigateUrl="/Account/ManageLogins" Text="[Manage]" runat="server" />
 
-                    </dd>
+                    </dd>--%>
                     <%--
                         Phone Numbers can used as a second factor of verification in a two-factor authentication system.
                         See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
@@ -54,8 +54,8 @@
                     <dt>Autenticación de dos factores:</dt>
                     <dd>
                         <p>
-                            No hay ningún proveedor de autenticación en dos fases configurado. Consulte <a href="https://go.microsoft.com/fwlink/?LinkId=403804">este artículo</a>
-                             para obtener detalles sobre cómo configurar esta aplicación ASP.NET para que sea compatible con la autenticación en dos fases.
+                            No hay ningún proveedor de autenticación en dos fases configurado.
+                            
                         </p>
                         <% if (TwoFactorEnabled)
                           { %> 

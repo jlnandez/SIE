@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ArchivosAlumnos.aspx.cs" Inherits="SIE.vMaestro.ArchivosAlumnos" %>
+﻿<%@ Page Title="Archivos de Alumnos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ArchivosAlumnos.aspx.cs" Inherits="SIE.vMaestro.ArchivosAlumnos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
         <h2><%: Title %>.</h2>
@@ -33,8 +33,8 @@
             </td>
             <td style="background-color: #808080">
                 
-                <asp:Button ID="btnUploadAvion" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadAvion_Click" />
-                <asp:Button ID="btnBorrarAvion" Class="btnborrar" runat="server" Text="Borrar Archivo" Width="138px" Visible="False" OnClick="btnBorrarAvion_Click" />
+                <asp:Button ID="btnUploadAvion" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadAvion_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarAvion" Class="btnborrar" runat="server" Text="Borrar Archivo" Width="138px" Visible="False" OnClick="btnBorrarAvion_Click" Enabled="False" />
             </td>
         </tr>
         <tr>
@@ -48,8 +48,8 @@
                 <asp:Label ID="lblAlertRenta" runat="server" CssClass="text-danger" Text="Seleccione archivo" Visible="False"></asp:Label>
             </td>
             <td style="background-color: #666666">
-                <asp:Button ID="btnUploadRenta" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadRenta_Click" />
-                <asp:Button ID="btnBorrarRenta" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" UseSubmitBehavior="False" OnClick="btnBorrarRenta_Click" />
+                <asp:Button ID="btnUploadRenta" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadRenta_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarRenta" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" UseSubmitBehavior="False" OnClick="btnBorrarRenta_Click" Enabled="False" />
             </td>
         </tr>
         <tr>
@@ -64,8 +64,8 @@
 
             </td>
             <td style="background-color: #808080">
-                <asp:Button ID="btnUploadExperiencia" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadExperiencia_Click" />
-                <asp:Button ID="btnBorrarExperiencia" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarExperiencia_Click" />
+                <asp:Button ID="btnUploadExperiencia" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadExperiencia_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarExperiencia" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarExperiencia_Click" Enabled="False" />
             </td>
         </tr>
         <tr>
@@ -79,8 +79,8 @@
                 <asp:Label ID="lblAlertWord" runat="server" CssClass="text-danger" Text="Seleccione archivo" Visible="False"></asp:Label>
             </td>
             <td style="background-color: #666666">
-                <asp:Button ID="btnUploadWord" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadWord_Click" />
-                <asp:Button ID="btnBorrarWord" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarWord_Click" />
+                <asp:Button ID="btnUploadWord" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadWord_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarWord" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarWord_Click" Enabled="False" />
             </td>
         </tr>
         <tr>
@@ -94,8 +94,8 @@
                 <asp:Label ID="lblAlertPowerPoint" runat="server" CssClass="text-danger" Text="Seleccione archivo" Visible="False"></asp:Label>
             </td>
             <td style="background-color: #808080">
-                <asp:Button ID="btnUploadPower" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadPower_Click" />
-                <asp:Button ID="btnBorrarPower" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarPower_Click" />
+                <asp:Button ID="btnUploadPower" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadPower_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarPower" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarPower_Click" Enabled="False" />
             </td>
         </tr>
         <tr>
@@ -109,8 +109,8 @@
                 <asp:Label ID="lblAlertFotos" runat="server" CssClass="text-danger" Text="Seleccione archivo" Visible="False"></asp:Label>
             </td>
             <td style="background-color: #666666">
-                <asp:Button ID="btnUploadFoto" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadFoto_Click" />
-                <asp:Button ID="btnBorrarFoto" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarFoto_Click" />
+                <asp:Button ID="btnUploadFoto" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadFoto_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarFoto" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarFoto_Click" Enabled="False" />
             </td>
         </tr>
         <tr>
@@ -124,8 +124,8 @@
                 <asp:Label ID="lblAlertPlatica" runat="server" CssClass="text-danger" Text="Seleccione archivo" Visible="False"></asp:Label>
             </td>
             <td style="background-color: #808080">
-                <asp:Button ID="btnUploadPlatica" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadPlatica_Click" />
-                <asp:Button ID="btnBorrarPlatica" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarPlatica_Click" />
+                <asp:Button ID="btnUploadPlatica" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadPlatica_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarPlatica" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarPlatica_Click" Enabled="False" />
             </td>
         </tr>
         <tr>
@@ -139,8 +139,8 @@
                 <asp:Label ID="lblAlertCalificacion" runat="server" CssClass="text-danger" Text="Seleccione archivo" Visible="False"></asp:Label>
             </td>
             <td style="background-color: #666666">
-                <asp:Button ID="btnUploadCal" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadCal_Click" />
-                <asp:Button ID="btnBorrarCal" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarCal_Click" />
+                <asp:Button ID="btnUploadCal" Class="btncargar" runat="server" Text="Cargar Archivo" OnClick="btnUploadCal_Click" Enabled="False" />
+                <asp:Button ID="btnBorrarCal" Class="btnborrar" runat="server" Text="Borrar Archivo" Visible="False" Width="138px" OnClick="btnBorrarCal_Click" Enabled="False" />
             </td>
         </tr>
         <tr>

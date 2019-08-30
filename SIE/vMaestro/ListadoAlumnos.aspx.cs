@@ -15,7 +15,7 @@ namespace SIE.vMaestro
             if (!IsPostBack)
             {
                 //cambio GRIDVIEW 
-                
+                MakeGridViewPrinterFriendly(GridView1);
             }
         }
 
@@ -32,13 +32,35 @@ namespace SIE.vMaestro
         {
             //asigamos id al dar click seleccionar en gridview
             Session["id"] = GridView1.SelectedRow.Cells[1].Text;
+            Session["Matricula"] = GridView1.SelectedRow.Cells[5].Text;
+            Session["usr"] = GridView1.SelectedRow.Cells[10].Text;
             btnEditar.Enabled = true;
+            btnViewFiles.Enabled = true;
+            btnModal.Enabled = true;
 
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             Response.Redirect("AlumnoEditar");
+        }
+
+        protected void btnViewFiles_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("ArchivosAlumnos");
+        }
+
+        protected void btnDeleteC_Click(object sender, EventArgs e)
+        {
+            ds_usuarios.Delete();
+            ds_alumnos.Delete();
+            Response.Write("<script>alert('Registro Borrado Exitosamente');</script>");
+        }
+
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Account/Register");
         }
     }
 }
