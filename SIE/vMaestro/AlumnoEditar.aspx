@@ -90,9 +90,9 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" Text="Cancelar" CssClass="btn btn-default" />
+                <asp:Button runat="server" Text="Cancelar" CssClass="btn btn-default" ID="btnCancelar" OnClick="btnCancelar_Click" />
 
-                <asp:Button runat="server" Text="Guardar Cambios" CssClass="btn btn-success" />
+                <asp:Button runat="server" Text="Guardar Cambios" CssClass="btn btn-success" ID="btnSave" OnClick="btnSave_Click" />
             </div>
         </div>
 
@@ -113,14 +113,14 @@
             <asp:SessionParameter Name="id" SessionField="id" />
         </SelectParameters>
         <UpdateParameters>
-            <asp:Parameter Name="nombre" />
-            <asp:Parameter Name="paterno" />
-            <asp:Parameter Name="materno" />
-            <asp:Parameter Name="matricula" />
-            <asp:Parameter Name="carrera" />
-            <asp:Parameter Name="ciclo" />
-            <asp:Parameter Name="telefono" />
-            <asp:Parameter Name="id" />
+            <asp:ControlParameter ControlID="txtNombre" Name="nombre" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtApellidoPaterno" Name="paterno" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtApellidoMaterno" Name="materno" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtMatricula" Name="matricula" PropertyName="Text" />
+            <asp:ControlParameter ControlID="ddlCarrera" Name="carrera" PropertyName="SelectedValue" />
+            <asp:ControlParameter ControlID="txtCiclo" Name="ciclo" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtTelefono" Name="telefono" PropertyName="Text" />
+            <asp:SessionParameter Name="id" SessionField="id" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="cat_carreras" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [Cat_Carreras]"></asp:SqlDataSource>

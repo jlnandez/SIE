@@ -61,5 +61,16 @@ namespace SIE.vAlumno
             dv = null;
 
         }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            ds_alumnos.Update();
+            Response.Redirect("ListadoAlumnos");
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListadoAlumnos");
+        }
     }
 }

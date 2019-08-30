@@ -293,6 +293,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\common.scss" />
     <Content Include="Content\plugins\DataTables\Buttons-1.5.6\css\mixins.scss" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -326,6 +327,7 @@
     <Content Include="vMaestro\AlumnoEditar.aspx" />
     <Content Include="vAlumno\DocumentosSubir.aspx" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="vMaestro\ArchivosAlumnos.aspx" />
     <Content Include="vMaestro\ListadoAlumnos.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -502,6 +504,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="vMaestro\ArchivosAlumnos.aspx.cs">
+      <DependentUpon>ArchivosAlumnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vMaestro\ArchivosAlumnos.aspx.designer.cs">
+      <DependentUpon>ArchivosAlumnos.aspx</DependentUpon>
     </Compile>
     <Compile Include="vMaestro\ListadoAlumnos.aspx.cs">
       <DependentUpon>ListadoAlumnos.aspx</DependentUpon>
