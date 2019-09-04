@@ -29,7 +29,9 @@
             <asp:BoundField DataField="ApellidoMaterno" HeaderText="ApellidoMaterno" SortExpression="ApellidoMaterno" />
             <asp:BoundField DataField="Matricula" HeaderText="Matricula" SortExpression="Matricula" />
             <asp:BoundField DataField="Carrera" HeaderText="Carrera" SortExpression="Carrera" />
+            <asp:BoundField DataField="UniversidadDestino" HeaderText="UniversidadDestino" SortExpression="UniversidadDestino" />
             <asp:BoundField DataField="CicloEscolar" HeaderText="CicloEscolar" SortExpression="CicloEscolar" />
+            <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero" />
             <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
@@ -50,7 +52,7 @@
 
 
 
-    <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT Alumno.Id, Alumno.Nombre, Alumno.ApellidoPaterno, Alumno.ApellidoMaterno, Alumno.Matricula, Cat_Carreras.Carrera, Alumno.CicloEscolar, Alumno.Telefono, AspNetUsers.Email, AspNetUsers.UserName, AspNetUsers.PasswordHash FROM Alumno INNER JOIN AspNetUsers ON Alumno.User_Id = AspNetUsers.Id INNER JOIN Cat_Carreras ON Alumno.Carrera_Id = Cat_Carreras.Id" DeleteCommand="DELETE FROM Alumno WHERE (Id = @id)">
+    <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT Alumno.Id, Alumno.Nombre, Alumno.ApellidoPaterno, Alumno.ApellidoMaterno, Alumno.Matricula, Cat_Carreras.Carrera, Alumno.UniversidadDestino, Alumno.CicloEscolar, Cat_Genero.Genero, Alumno.Telefono, AspNetUsers.Email, AspNetUsers.UserName, AspNetUsers.PasswordHash FROM Alumno INNER JOIN AspNetUsers ON Alumno.User_Id = AspNetUsers.Id INNER JOIN Cat_Carreras ON Alumno.Carrera_Id = Cat_Carreras.Id INNER JOIN Cat_Genero ON Alumno.Genero_Id = Cat_Genero.id" DeleteCommand="DELETE FROM Alumno WHERE (Id = @id)">
         <DeleteParameters>
             <asp:SessionParameter Name="id" SessionField="id" />
         </DeleteParameters>

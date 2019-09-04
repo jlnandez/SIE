@@ -10,7 +10,6 @@
     </p>
 
     <div class="form-horizontal">
-        <h4>Crear una nueva cuenta</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
 
@@ -84,6 +83,26 @@
         </div>
 
         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="ddlGenero" CssClass="col-md-2 control-label">Genero</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="ddlGenero" runat="server" CssClass="form-control" DataSourceID="cat_genero" DataTextField="Genero" DataValueField="id"></asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlGenero"
+                    CssClass="text-danger" ErrorMessage="El campo Carrera es obligatorio." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtUniDestino" CssClass="col-md-2 control-label">Universidad Destino</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtUniDestino" CssClass="form-control" MaxLength="50" placeholder="Universidad Autonoma de Mexico" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUniDestino"
+                    CssClass="text-danger" ErrorMessage="El campo Ciclo Escolar es obligatorio." />
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="ddlCarrera" CssClass="col-md-2 control-label">Carrera</asp:Label>
             <div class="col-md-10">
                 <asp:DropDownList ID="ddlCarrera" runat="server" CssClass="form-control" DataSourceID="cat_carreras" DataTextField="Carrera" DataValueField="Id"></asp:DropDownList>
@@ -91,6 +110,8 @@
                     CssClass="text-danger" ErrorMessage="El campo Carrera es obligatorio." />
             </div>
         </div>
+
+
 
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="txtCiclo" CssClass="col-md-2 control-label">Ciclo Escolar</asp:Label>
@@ -133,7 +154,7 @@
 
 
 
-    <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" InsertCommand="INSERT INTO Alumno(Nombre, ApellidoPaterno, ApellidoMaterno, Matricula, Carrera_Id, CicloEscolar, Telefono, User_Id) VALUES (@nombre, @apellidoPaterno, @apellidoMaterno, @matricula, @carrera, @ciclo, @telefono, @userId)" SelectCommand="SELECT Alumno.* FROM Alumno">
+    <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" InsertCommand="INSERT INTO Alumno(Nombre, ApellidoPaterno, ApellidoMaterno, Matricula, Carrera_Id, CicloEscolar, Telefono, User_Id, UniversidadDestino, Genero_Id) VALUES (@nombre, @apellidoPaterno, @apellidoMaterno, @matricula, @carrera, @ciclo, @telefono, @userId, @universidadDestino, @genero)" SelectCommand="SELECT Alumno.* FROM Alumno">
         <InsertParameters>
             <asp:ControlParameter ControlID="txtNombre" Name="nombre" PropertyName="Text" />
             <asp:ControlParameter ControlID="txtApellidoPaterno" Name="apellidoPaterno" PropertyName="Text" />
@@ -143,10 +164,15 @@
             <asp:ControlParameter ControlID="txtCiclo" Name="ciclo" PropertyName="Text" />
             <asp:ControlParameter ControlID="txtTelefono" Name="telefono" PropertyName="Text" />
             <asp:ControlParameter ControlID="txtAux" Name="userId" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtUniDestino" Name="universidadDestino" PropertyName="Text" />
+            <asp:ControlParameter ControlID="ddlGenero" Name="genero" PropertyName="SelectedValue" />
         </InsertParameters>
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="cat_carreras" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [Cat_Carreras]"></asp:SqlDataSource>
-
+    <asp:SqlDataSource ID="cat_genero" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [Cat_Genero]"></asp:SqlDataSource>
+  
+    
+    
     <asp:TextBox ID="txtAux" runat="server" Visible="False"></asp:TextBox>
 
 
