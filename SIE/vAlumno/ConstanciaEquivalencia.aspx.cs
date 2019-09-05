@@ -38,6 +38,11 @@ namespace SIE.vAlumno
             if (!Page.IsPostBack)
             {
                 buscar();
+
+            }
+            else
+            {
+     
             }
 
         }
@@ -85,6 +90,13 @@ namespace SIE.vAlumno
 
         }
 
+        protected void btnGuardarMateria_Click(object sender, EventArgs e)
+        {
+            
+            ds_materias.Insert();
+            GridView1.DataBind();
+
+        }
 
 
 
