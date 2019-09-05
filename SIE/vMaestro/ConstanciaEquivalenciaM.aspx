@@ -1,10 +1,46 @@
-﻿<%@ Page Title="Constancia de Equivalencia" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ConstanciaEquivalencia.aspx.cs" Inherits="SIE.vAlumno.ConstanciaEquivalencia" %>
+﻿<%@ Page Title="Constancia de Equivalencia" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ConstanciaEquivalenciaM.aspx.cs" Inherits="SIE.vMaestro.ConstanciaEquivalenciaM" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2 Style="color: #507CD1;"><%: Title %>.</h2>
+    <script src="../Content/plugins/DataTables/datatables.min.js"></script>
+    <link href="../Content/plugins/DataTables/datatables.min.css" rel="stylesheet" />
+
+    <h2 style="color: #507CD1;"><%: Title %>.</h2>
+    <asp:Button ID="btnRegresar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" Visible="False" CssClass="btn btn-warning" />
     <hr />
 
-    <div class="container">
+
+    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="ds_alumnos2" CssClass="dataTable table table-sm table-responsive table-striped table-bordered table-hover" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+        <AlternatingRowStyle BackColor="White" />
+        <Columns>
+            <asp:CommandField ShowSelectButton="True" />
+            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+            <asp:BoundField DataField="ApellidoPaterno" HeaderText="ApellidoPaterno" SortExpression="ApellidoPaterno" />
+            <asp:BoundField DataField="ApellidoMaterno" HeaderText="ApellidoMaterno" SortExpression="ApellidoMaterno" />
+            <asp:BoundField DataField="Matricula" HeaderText="Matricula" SortExpression="Matricula" />
+            <asp:BoundField DataField="Carrera" HeaderText="Carrera" SortExpression="Carrera" />
+            <asp:BoundField DataField="UniversidadDestino" HeaderText="UniversidadDestino" SortExpression="UniversidadDestino" />
+            <asp:BoundField DataField="CicloEscolar" HeaderText="CicloEscolar" SortExpression="CicloEscolar" />
+            <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero" />
+            <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+            <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
+            <asp:BoundField DataField="PasswordHash" HeaderText="PasswordHash" SortExpression="PasswordHash" />
+        </Columns>
+        <EditRowStyle BackColor="#2461BF" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EFF3FB" />
+        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+    </asp:GridView>
+
+
+    <asp:Panel ID="Panel1" runat="server" Visible="false">
 
         <div class="row">
             <div class="col-sm-4">
@@ -44,7 +80,7 @@
 
         </div>
 
-    </div>
+    </asp:Panel>
 
     <br />
 
@@ -57,6 +93,7 @@
                 <asp:BoundField DataField="NombreMateriaDestino" HeaderText="NombreMateriaDestino" SortExpression="NombreMateriaDestino" />
                 <asp:BoundField DataField="ClaveMateriaLocal" HeaderText="ClaveMateriaLocal" SortExpression="ClaveMateriaLocal" />
                 <asp:BoundField DataField="NombreMateriaLocal" HeaderText="NombreMateriaLocal" SortExpression="NombreMateriaLocal" />
+                <asp:BoundField DataField="Calificacion" HeaderText="Calificacion" SortExpression="Calificacion" />
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -70,7 +107,39 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
 
+    <asp:Panel ID="Panel2" runat="server" Visible="false">
+        <br />
+        <div class="row">
+            <div class="col-sm-6">
+                <asp:Label ID="Label3" runat="server" Text="Fecha" Style="color: #507CD1;" Font-Bold="True"></asp:Label>
+                <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+            </div>
+            <div class="col-sm-6">
 
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-6">
+                <asp:Label ID="Label1" runat="server" Text="Coordinador de Movilidad Académica" Style="color: #507CD1;" Font-Bold="True"></asp:Label>
+                <asp:TextBox ID="txtCMA" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="col-sm-6">
+                <asp:Label ID="Label2" runat="server" Text="Coordinadora de la Carrera" Style="color: #507CD1;" Font-Bold="True"></asp:Label>
+                <asp:TextBox ID="txtCC" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <asp:Button ID="btnGenrarConstancia" runat="server" Text="Generar Constancia de Equivalencias" CssClass="btn btn-success" OnClick="btnGenrarConstancia_Click" />
+            </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+
+    </asp:Panel>
 
     <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT Alumno.Nombre, Alumno.ApellidoPaterno, Alumno.ApellidoMaterno, Alumno.Matricula, Alumno.CicloEscolar, Alumno.Telefono, Alumno.UniversidadDestino, Cat_Carreras.Carrera, Cat_Genero.Genero FROM Alumno INNER JOIN Cat_Carreras ON Alumno.Carrera_Id = Cat_Carreras.Id INNER JOIN Cat_Genero ON Alumno.Genero_Id = Cat_Genero.id WHERE (Alumno.Matricula = @matricula)">
         <SelectParameters>
@@ -78,7 +147,7 @@
         </SelectParameters>
     </asp:SqlDataSource>
 
-    <asp:SqlDataSource ID="ds_materias" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT id, ClaveMateriaDestino, NombreMateriaDestino, ClaveMateriaLocal, NombreMateriaLocal FROM EquivalenciaMaterias WHERE (Matricula = @matricula)" InsertCommand="INSERT INTO EquivalenciaMaterias(ClaveMateriaDestino, NombreMateriaDestino, ClaveMateriaLocal, NombreMateriaLocal, Matricula) VALUES (@ClaveMateriaDestino, @NombreMateriaDestino, @ClaveMateriaLocal, @NombreMateriaLocal, @Matricula)" DeleteCommand="DELETE FROM EquivalenciaMaterias WHERE (id = @id)" UpdateCommand="UPDATE EquivalenciaMaterias SET ClaveMateriaDestino = @ClaveMateriaDestino, NombreMateriaDestino = @NombreMateriaDestino, ClaveMateriaLocal = @ClaveMateriaLocal, NombreMateriaLocal = @NombreMateriaLocal WHERE (id = @id)">
+    <asp:SqlDataSource ID="ds_materias" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT id, ClaveMateriaDestino, NombreMateriaDestino, ClaveMateriaLocal, NombreMateriaLocal, Calificacion FROM EquivalenciaMaterias WHERE (Matricula = @matricula)" InsertCommand="INSERT INTO EquivalenciaMaterias(ClaveMateriaDestino, NombreMateriaDestino, ClaveMateriaLocal, NombreMateriaLocal, Matricula) VALUES (@ClaveMateriaDestino, @NombreMateriaDestino, @ClaveMateriaLocal, @NombreMateriaLocal, @Matricula)" DeleteCommand="DELETE FROM EquivalenciaMaterias WHERE (id = @id)" UpdateCommand="UPDATE EquivalenciaMaterias SET ClaveMateriaDestino = @ClaveMateriaDestino, NombreMateriaDestino = @NombreMateriaDestino, ClaveMateriaLocal = @ClaveMateriaLocal, NombreMateriaLocal = @NombreMateriaLocal, Calificacion = @Calificacion WHERE (id = @id)">
         <DeleteParameters>
             <asp:Parameter Name="id" />
         </DeleteParameters>
@@ -97,11 +166,34 @@
             <asp:Parameter Name="NombreMateriaDestino" />
             <asp:Parameter Name="ClaveMateriaLocal" />
             <asp:Parameter Name="NombreMateriaLocal" />
+            <asp:Parameter Name="Calificacion" />
             <asp:Parameter Name="id" />
         </UpdateParameters>
     </asp:SqlDataSource>
 
+        <asp:SqlDataSource ID="ds_alumnos2" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT Alumno.Id, Alumno.Nombre, Alumno.ApellidoPaterno, Alumno.ApellidoMaterno, Alumno.Matricula, Cat_Carreras.Carrera, Alumno.UniversidadDestino, Alumno.CicloEscolar, Cat_Genero.Genero, Alumno.Telefono, AspNetUsers.Email, AspNetUsers.UserName, AspNetUsers.PasswordHash FROM Alumno INNER JOIN AspNetUsers ON Alumno.User_Id = AspNetUsers.Id INNER JOIN Cat_Carreras ON Alumno.Carrera_Id = Cat_Carreras.Id INNER JOIN Cat_Genero ON Alumno.Genero_Id = Cat_Genero.id" DeleteCommand="DELETE FROM Alumno WHERE (Id = @id)">
+        <DeleteParameters>
+            <asp:SessionParameter Name="id" SessionField="id" />
+        </DeleteParameters>
+    </asp:SqlDataSource>
 
+    <asp:SqlDataSource ID="ds_carta" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" DeleteCommand="DELETE FROM ConstanciaID WHERE (id = @id)" InsertCommand="INSERT INTO ConstanciaID(Matricula) VALUES (@Matricula)" SelectCommand="SELECT id, Matricula, CoordinadorMovilidad, CoordinadorCarrera, Fecha FROM ConstanciaID WHERE (Matricula = @Matricula)" UpdateCommand="UPDATE ConstanciaID SET CoordinadorMovilidad = @CoordinadorMovilidad, CoordinadorCarrera = @CoordinadorCarrera, Fecha = @Fecha WHERE (Matricula = @Matricula)">
+        <DeleteParameters>
+            <asp:Parameter Name="id" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:SessionParameter Name="Matricula" SessionField="Matricula" />
+        </InsertParameters>
+        <SelectParameters>
+            <asp:SessionParameter Name="Matricula" SessionField="Matricula" />
+        </SelectParameters>
+        <UpdateParameters>
+            <asp:ControlParameter ControlID="txtCMA" Name="CoordinadorMovilidad" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtCC" Name="CoordinadorCarrera" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtFecha" Name="Fecha" PropertyName="Text" />
+            <asp:SessionParameter Name="Matricula" SessionField="Matricula" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
 
     <div class="modal fad" id="ModalAgregar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -156,10 +248,21 @@
                 </div>
             </div>
         </div>
-        </div
+    </div>
 
         <script>
+            $(document).ready(function () {
+
+                var table = $('#MainContent_GridView2').DataTable({
+                    order: [[1, 'desc']],
+                    responsive: true,
+
+                });
+
+            });
 
         </script>
+
+
 
 </asp:Content>

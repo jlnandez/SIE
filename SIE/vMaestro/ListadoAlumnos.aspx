@@ -126,7 +126,7 @@
                     'excelHtml5',
                     'pdfHtml5'
                 ],
-                order: [[0, 'desc']],
+                order: [[1, 'desc']],
                 orderCellsTop: true,
                 fixedHeader: true,
                 responsive: true,

@@ -60,7 +60,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Alumnos<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/vMaestro/ListadoAlumnos.aspx">Listado Alumnos</a></li>
-                                <li><a href="#">Constancia de Equivalencia</a></li>
+                                <li><a href="/vMaestro/ConstanciaEquivalenciaM.aspx">Constancia de Equivalencia</a></li>
                                 <li><a href="/Account/ResetPassword.aspx">Restablecer Contraseña de Alumno</a></li>
                             </ul>
                         </li>
@@ -76,7 +76,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentos<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/vAlumno/DocumentosSubir.aspx">Subir Documentos</a></li>
-                                <li><a href="/vAlumno/ConstanciaEquivalencia.aspx">Constancia de Equivalencia</a></li>
+                                <li><a href="/vAlumno/ConstanciaEquivalencia.aspx">Agregar Materias</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Ayuda</a></li>
                             </ul>
