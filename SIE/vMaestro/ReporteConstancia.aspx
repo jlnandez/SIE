@@ -19,9 +19,21 @@
         </LocalReport>
     </rsweb:ReportViewer>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [Alumno]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [EquivalenciaMaterias]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [ConstanciaID]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT Alumno.Id, Alumno.Nombre, Alumno.ApellidoPaterno, Alumno.ApellidoMaterno, Alumno.Matricula, Alumno.CicloEscolar, Alumno.Telefono, Alumno.User_Id, Alumno.UniversidadDestino, Alumno.Genero_Id, Cat_Carreras.Carrera FROM Alumno INNER JOIN Cat_Carreras ON Alumno.Carrera_Id = Cat_Carreras.Id WHERE (Alumno.Matricula = @Matricula)">
+        <SelectParameters>
+            <asp:SessionParameter Name="Matricula" SessionField="Matricula" Type="String" />
+        </SelectParameters>
+        </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [EquivalenciaMaterias] WHERE ([Matricula] = @Matricula)">
+        <SelectParameters>
+            <asp:SessionParameter Name="Matricula" SessionField="Matricula" Type="Int32" />
+        </SelectParameters>
+        </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [ConstanciaID] WHERE ([Matricula] = @Matricula)">
+        <SelectParameters>
+            <asp:SessionParameter Name="Matricula" SessionField="Matricula" Type="Int32" />
+        </SelectParameters>
+        </asp:SqlDataSource>
 
 
 </asp:Content>
