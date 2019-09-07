@@ -52,7 +52,7 @@ namespace SIE
                 var result = signinManager.PasswordSignIn(inputEmail1.Text, inputPassword1.Text, RememberMe.Checked, shouldLockout: false);
 
                 //asignamos session mat con el texbox
-                Session["Matricula"] = inputEmail1.Text;
+                //Session["Matricula"] = inputEmail1.Text;
 
                 switch (result)
                 {

@@ -242,7 +242,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Clave</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -272,7 +274,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=First(Fields!UniversidadDestino.Value, "DataSet1")</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -302,7 +306,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Clave</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -332,7 +338,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>UABC</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -362,7 +370,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Calificacion</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -611,6 +621,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Format>d' de 'MMMM' de 'yyyy</Format>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>
@@ -886,7 +897,7 @@
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                   <TextDecoration>None</TextDecoration>
                   <Color>#000000</Color>
                 </Style>

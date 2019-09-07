@@ -87,7 +87,7 @@
             <div class="col-md-10">
                 <asp:DropDownList ID="ddlGenero" runat="server" CssClass="form-control" DataSourceID="cat_genero" DataTextField="Genero" DataValueField="id"></asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlGenero"
-                    CssClass="text-danger" ErrorMessage="El campo Carrera es obligatorio." />
+                    CssClass="text-danger" ErrorMessage="El campo Genero es obligatorio." />
             </div>
         </div>
 
@@ -96,7 +96,7 @@
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="txtUniDestino" CssClass="form-control" MaxLength="50" placeholder="Universidad Autonoma de Mexico" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUniDestino"
-                    CssClass="text-danger" ErrorMessage="El campo Ciclo Escolar es obligatorio." />
+                    CssClass="text-danger" ErrorMessage="El campo Universidad Destino es obligatorio." />
             </div>
         </div>
 

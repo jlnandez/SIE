@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 //add
 using System.IO;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNet.Identity;
 
 namespace SIE.vAlumno
 {
@@ -15,8 +17,14 @@ namespace SIE.vAlumno
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            user = (String)(Session["Matricula"]);
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var user1 = manager.FindById(User.Identity.GetUserId());
+            Session["Matricula"] = user1.UserName;
 
+            user = (String)(Session["Matricula"]);
+            
+
+            
 
 
             /////////////////////////////////////////////////////////

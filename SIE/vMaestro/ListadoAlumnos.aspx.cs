@@ -11,6 +11,15 @@ namespace SIE.vMaestro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.User.IsInRole("Admin"))
+            {
+
+            }
+            else
+            {
+                Response.Redirect("~/");
+            }
+
             MakeGridViewPrinterFriendly(GridView1);
             if (!IsPostBack)
             {

@@ -5,7 +5,7 @@
 
         <br />
 
-    <asp:Button ID="btnBack" runat="server" Text="Regresar" CssClass="btn btn-warning" />
+    <asp:Button ID="btnBack" runat="server" Text="Regresar" CssClass="btn btn-warning" OnClick="btnBack_Click" />
 
     <br />
 

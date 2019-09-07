@@ -15,17 +15,14 @@ namespace SIE.vMaestro
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            
             if (HttpContext.Current.User.IsInRole("Admin"))
-            {
-
-            }
-            if (HttpContext.Current.User.IsInRole("Alumno"))
             {
 
             }
             else
             {
-                //Response.Redirect("~/");
+                Response.Redirect("~/");
             }
 
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -37,8 +34,8 @@ namespace SIE.vMaestro
 
             if (!Page.IsPostBack)
             {
-                
-                MakeGridViewPrinterFriendly(GridView2);
+                Session["Matricula"] = "";
+                //MakeGridViewPrinterFriendly(GridView2);
             }
             MakeGridViewPrinterFriendly(GridView2);
 

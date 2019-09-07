@@ -59,6 +59,25 @@
         </div>
 
         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="ddlGenero" CssClass="col-md-2 control-label">Genero</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="ddlGenero" runat="server" CssClass="form-control" DataSourceID="cat_genero" DataTextField="Genero" DataValueField="id"></asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlGenero"
+                    CssClass="text-danger" ErrorMessage="El campo Genero es obligatorio." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txtUniDestino" CssClass="col-md-2 control-label">Universidad Destino</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txtUniDestino" CssClass="form-control" MaxLength="50" placeholder="Universidad Autonoma de Mexico" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUniDestino"
+                    CssClass="text-danger" ErrorMessage="El campo Universidad Destino es obligatorio." />
+            </div>
+        </div>
+
+
+        <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="ddlCarrera" CssClass="col-md-2 control-label">Carrera</asp:Label>
             <div class="col-md-10">
                 <asp:DropDownList ID="ddlCarrera" runat="server" CssClass="form-control" DataSourceID="cat_carreras" DataTextField="Carrera" DataValueField="Id"></asp:DropDownList>
@@ -98,7 +117,7 @@
 
     </div>
 
-    <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" InsertCommand="INSERT INTO Alumno(Nombre, ApellidoPaterno, ApellidoMaterno, Matricula, Carrera_Id, CicloEscolar, Telefono, User_Id) VALUES (@nombre, @apellidoPaterno, @apellidoMaterno, @matricula, @carrera, @ciclo, @telefono, @userId)" SelectCommand="SELECT Alumno.Id, Alumno.Nombre, Alumno.ApellidoPaterno, Alumno.ApellidoMaterno, Alumno.Matricula, Alumno.Carrera_Id, Alumno.CicloEscolar, Alumno.Telefono, AspNetUsers.UserName, AspNetUsers.Email FROM Alumno INNER JOIN AspNetUsers ON Alumno.User_Id = AspNetUsers.Id WHERE (Alumno.Id = @id)" UpdateCommand="UPDATE Alumno SET Nombre = @nombre, ApellidoPaterno = @paterno, ApellidoMaterno = @materno, Matricula = @matricula, Carrera_Id = @carrera, CicloEscolar = @ciclo, Telefono = @telefono WHERE (Id = @id)">
+    <asp:SqlDataSource ID="ds_alumnos" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" InsertCommand="INSERT INTO Alumno(Nombre, ApellidoPaterno, ApellidoMaterno, Matricula, Carrera_Id, CicloEscolar, Telefono, User_Id) VALUES (@nombre, @apellidoPaterno, @apellidoMaterno, @matricula, @carrera, @ciclo, @telefono, @userId)" SelectCommand="SELECT Alumno.Id, Alumno.Nombre, Alumno.ApellidoPaterno, Alumno.ApellidoMaterno, Alumno.Matricula, Alumno.Carrera_Id, Alumno.CicloEscolar, Alumno.Telefono, AspNetUsers.UserName, AspNetUsers.Email, Alumno.Genero_Id, Alumno.UniversidadDestino FROM Alumno INNER JOIN AspNetUsers ON Alumno.User_Id = AspNetUsers.Id WHERE (Alumno.Id = @id)" UpdateCommand="UPDATE Alumno SET Nombre = @nombre, ApellidoPaterno = @paterno, ApellidoMaterno = @materno, Matricula = @matricula, Carrera_Id = @carrera, CicloEscolar = @ciclo, Telefono = @telefono, UniversidadDestino = @UniversidadDestino, Genero_Id = @Genero_Id WHERE (Id = @id)">
         <InsertParameters>
             <asp:ControlParameter ControlID="txtNombre" Name="nombre" PropertyName="Text" />
             <asp:ControlParameter ControlID="txtApellidoMaterno" Name="apellidoPaterno" PropertyName="Text" />
@@ -120,11 +139,13 @@
             <asp:ControlParameter ControlID="ddlCarrera" Name="carrera" PropertyName="SelectedValue" />
             <asp:ControlParameter ControlID="txtCiclo" Name="ciclo" PropertyName="Text" />
             <asp:ControlParameter ControlID="txtTelefono" Name="telefono" PropertyName="Text" />
+            <asp:ControlParameter ControlID="txtUniDestino" Name="UniversidadDestino" PropertyName="Text" />
+            <asp:ControlParameter ControlID="ddlGenero" Name="Genero_Id" PropertyName="SelectedValue" />
             <asp:SessionParameter Name="id" SessionField="id" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="cat_carreras" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [Cat_Carreras]"></asp:SqlDataSource>
-
+    <asp:SqlDataSource ID="cat_genero" runat="server" ConnectionString="<%$ ConnectionStrings:SIEConnectionString %>" SelectCommand="SELECT * FROM [Cat_Genero]"></asp:SqlDataSource>
 
 
 </asp:Content>

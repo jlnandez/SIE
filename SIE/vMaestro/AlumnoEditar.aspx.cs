@@ -12,6 +12,15 @@ namespace SIE.vAlumno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.User.IsInRole("Admin"))
+            {
+
+            }
+            else
+            {
+                Response.Redirect("~/");
+            }
+
             //validacion de sessiones
             string user = (string)(Session["user"]);
 
@@ -50,7 +59,10 @@ namespace SIE.vAlumno
                 txtTelefono.Text = telefono;
                 string email = dv.Table.Rows[0][9].ToString();
                 Email.Text = email;
-
+                string genero = dv.Table.Rows[0][10].ToString();
+                ddlGenero.Text = genero;
+                string uni = dv.Table.Rows[0][11].ToString();
+                txtUniDestino.Text = uni;
             }
             else
             {

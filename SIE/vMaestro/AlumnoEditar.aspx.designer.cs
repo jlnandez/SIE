@@ -58,6 +58,24 @@ namespace SIE.vAlumno {
         protected global::System.Web.UI.WebControls.TextBox txtApellidoMaterno;
         
         /// <summary>
+        /// ddlGenero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGenero;
+        
+        /// <summary>
+        /// txtUniDestino control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUniDestino;
+        
+        /// <summary>
         /// ddlCarrera control.
         /// </summary>
         /// <remarks>
@@ -119,5 +137,14 @@ namespace SIE.vAlumno {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource cat_carreras;
+        
+        /// <summary>
+        /// cat_genero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource cat_genero;
     }
 }
