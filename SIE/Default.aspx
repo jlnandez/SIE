@@ -6,7 +6,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
-    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
     <style>
         .errorblock {
             color: #ff0000;
